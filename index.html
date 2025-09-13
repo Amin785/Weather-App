@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="title">Weather App</h1>
+
+    <form id="searchForm" class="search" autocomplete="off">
+      <div class="inputWrap">
+        <input id="cityInput" type="text" placeholder="Enter city (e.g. Addis Ababa)" required>
+        <ul id="suggestions" class="suggestions hidden"></ul>
+      </div>
+      <button type="submit">Search</button>
+      <div class="unitsToggle">
+        <label><input type="radio" name="units" value="metric" checked> °C</label>
+        <label><input type="radio" name="units" value="imperial"> °F</label>
+      </div>
+    </form>
+
+    <section id="result" class="result hidden">
+      <div class="location">
+        <h2 id="locationName"></h2>
+        <p id="localTime" class="muted"></p>
+      </div>
+      <div class="mainRow">
+        <div class="iconWrap">
+          <img id="weatherIcon" alt="weather icon">
+        </div>
+        <div class="details">
+          <p id="description" class="desc"></p>
+          <p class="temp"><span id="tempValue"></span><span id="tempUnit"></span></p>
+          <p class="feels">Feels like: <span id="feelsLike"></span></p>
+        </div>
+      </div>
+      <ul class="more">
+        <li>Humidity: <span id="humidity"></span>%</li>
+        <li>Wind: <span id="wind"></span></li>
+        <li>Pressure: <span id="pressure"></span> hPa</li>
+      </ul>
+    </section>
+
+    <p id="message" class="message"></p>
+    <footer class="foot">Powered by OpenWeatherMap • Built for learning</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
